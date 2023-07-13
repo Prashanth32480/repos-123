@@ -1,0 +1,73 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "IdentityIsLocal": true,
+    "GrassrootsKeyVaultBaseUrl": "https://keyvaulturl",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "a3ebb4c1-2a46-409a-9cf7-fb96a96f197f",
+    "IdentityDbConnectionString": "Server=tcp:ac-dev-identity-sql.database.windows.net,1433;Initial Catalog=ac-dev-identity-db;Persist Security Info=False;User ID=acsqladmin;Password=XtIvW0kL1AkpTFQ!^2w$Pa85;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=acdevidentityconsumpfunc;AccountKey=kdcM0d2soyrkJ6IbKrDSOSkiEhV2vy86+fS/tySifn06Y9dLfZKhYQZ1NMk68ZLx/Og6w2BCEkUS+AStOyghGQ==;EndpointSuffix=core.windows.net",
+    "IdentityInsideRawFeedStorageConnection": "DefaultEndpointsProtocol=https;AccountName=acdevidentityfunc;AccountKey=T7+PkzknxUdmB66GnXTgQOi54R5RApkk9Xi3Bn5w9WqJWnzxr1a3xFvHFsLnFPjqHyGofWbmHl05p8eFCqlF4Q==;EndpointSuffix=core.windows.net",
+    "LaunchDarkly.SDKKey": "sdk-9993d737-ca73-4ae0-ad99-cd7dd6763675",
+
+    //Grassroots
+    "GrassrootsChangeTrackEnabled": true,
+    "GrassrootsDomainEventGridEndPoint": "https://ac-dev-grassroots-domains-evg.australiaeast-1.eventgrid.azure.net/api/events",
+    "GrassrootsDomainEventGridKey": "1jXf4Ddr1908SB6LFNBemVkOEfU+79ZogU0+XAJQu4c=",
+    "GrassrootsPublishEventToBeRetrySeconds": "3",
+    "GrassrootsPublishEventToBeRetryCount": "5",
+    "IdentityInsiderFeedsContainer": "insiderfeedcontainer",
+    "IdentityOneCustomerFeedsContainer": "onecustomerfeedcontainer",
+
+    //CDC
+    "CDCApiKey": "4_V_QZAzAvVc9AcWf9KsaeCA",
+    "CDCUserKey": "AOT7kFJP6mFU",
+    "CDCSecretKey": "UBoKVeTq5ARoIQK82FQVssLGJJM+IItI",
+    "CDCAccountApiBaseUrl": "https://accounts.au1.gigya.com/",
+
+    //Insider
+    "InsiderUpsertDataUrl": "https://unification.useinsider.com/api/user/v1/upsert",
+
+    //Insider ApiKeys
+    "InsiderCricketauPanelApiKey": "ce0256ff8c72823152d0b3541b57497dbfeb6067091fff500badd38bd02481",
+    "InsiderPlaycricketauPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderShopcricketauPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderAdelaidestrikersPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderBrisbaneheatPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderHobarthurricanesPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderMelbournerenegadesPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderMelbournestarsPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderPerthscorchersPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderSydneysixersPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderSydneythunderPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderCricketactPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderCricketnswPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderQldcricketPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderSacaauPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderCrickettasPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderCricketvicPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderWacricketPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+    "InsiderNtcricketPanelApiKey": "2d3138857b5708196d08134bdf4167894c8ad1a673c5cfc21fc390b92c0947",
+
+    //Insider Partner name
+    "InsiderCricketauPartnerName": "cricketauuat",
+    "InsiderPlaycricketauPartnerName": "playcricketauuat",
+    "InsiderShopcricketauPartnerName": "shopcricketauuat",
+    "InsiderAdelaidestrikersPartnerName": "adelaidestrikersuat",
+    "InsiderBrisbaneheatPartnerName": "brisbaneheatuat",
+    "InsiderHobarthurricanesPartnerName": "hobarthurricanesuat",
+    "InsiderMelbournerenegadesPartnerName": "melbournerenegadesuat",
+    "InsiderMelbournestarsPartnerName": "melbournestarsuat",
+    "InsiderPerthscorchersPartnerName": "perthscorchersuat",
+    "InsiderSydneysixersPartnerName": "sydneysixersuat",
+    "InsiderSydneythunderPartnerName": "sydneythunderuat",
+    "InsiderCricketactPartnerName": "cricketactuat",
+    "InsiderCricketnswPartnerName": "cricketnswuat",
+    "InsiderQldcricketPartnerName": "qldcricketuat",
+    "InsiderSacaauPartnerName": "sacaauuat",
+    "InsiderCrickettasPartnerName": "crickettasuat",
+    "InsiderCricketvicPartnerName": "cricketvicuat",
+    "InsiderWacricketPartnerName": "wacricketuat",
+    "InsiderNtcricketPartnerName": "ntcricketuat"
+  }
+  }

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="cb6be481-1d13-42c0-b40a-d7b4b87c6b14" ChangeDateTime="02/17/2021 07:25:24">
+    <Property Name="ElementName" Value="[dbo].[Test].[ShortName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Test]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="51074c1f-5481-4705-accf-d62f17ca918f" ChangeDateTime="07/15/2022 05:50:31">
+    <Property Name="ElementName" Value="[dbo].[ParticipantMapping].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ParticipantMapping]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ParticipantGuid" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bd8ccb05-9631-4c30-8834-d4f3a61519fc" ChangeDateTime="08/16/2022 05:41:43">
+    <Property Name="ElementName" Value="[app].[Participant].[IsNameSuppressed]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[app].[Participant]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Is" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="974db1e2-9f11-4392-aa37-ed35344fb6fe" ChangeDateTime="08/16/2022 05:42:10">
+    <Property Name="ElementName" Value="[app].[Participant].[Is]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[app].[Participant]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IsNameVisible" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fcbbe11e-3a53-4a81-b72d-ded590f71144" ChangeDateTime="08/16/2022 05:42:43">
+    <Property Name="ElementName" Value="[audit].[Participant].[IsNameSuppressed]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[audit].[Participant]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IsNameVisible" />
+  </Operation>
+</Operations>

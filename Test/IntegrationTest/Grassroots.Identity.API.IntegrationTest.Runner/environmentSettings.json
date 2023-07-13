@@ -1,0 +1,18 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug"
+    }
+  },
+  "Delay": 10, // Delay time in seconds after each feeds is send so that it can be processed before the testing on it begins.
+  "APIConfig": [
+    {
+      "Name": "Sitecore", //The name of the Folder and also the endpoint.
+      "Extension": ".json",
+      "Url": "https://ac-dev-orgs-func.azurewebsites.net",
+      "KeyName": "sitecore-api-key",
+      "KeyValue": "d43c2b283c9742ef9dc737c74a06b8a5"
+    }
+  ],
+  "IdentityDbConnectionString": ""
+}

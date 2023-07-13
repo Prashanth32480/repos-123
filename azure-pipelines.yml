@@ -1,0 +1,381 @@
+# Grasstoots pipeline
+#Multi-configuration Build----@Yaml build involves netcore3.1 with ubuntu ver20.04 and windows 2019 hosted agents
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+name: $(date:yyyyMMdd)-$(Build.BuildId)
+jobs:
+#- job: dev
+#  pool:
+#    vmImage: 'ubuntu-20.04'
+#  variables:
+#  - group: CA-Grassroots-Web-Dev-VG
+#  - group: CA-Grassroots-Web-DEV-KeyVault-VG
+  
+#  steps:
+  
+#  - task: Docker@2
+#    displayName: 'Build and Push Image identity'
+#    inputs:
+#      containerRegistry: 'docker-aks'
+#      repository: 'cricketaustralia/web-grassroots-identity-dev'
+#      command: buildAndPush
+#      Dockerfile: Dockerfile
+
+#  - task: 'qetza.replacetokens.replacetokens-task.replacetokens@3'
+#    displayName: 'Replace Token Dev'
+#    inputs:
+#      rootDirectory: 'service-deployments/identity-svc'
+#      targetFiles: 'grassroots-identity-manifest-002.yml'
+#      encoding: 'auto'
+#      writeBOM: true
+#      actionOnMissing: 'warn'
+#      keepToken: false
+#      tokenPrefix: '#{'
+#      tokenSuffix: '}#'
+#      useLegacyPattern: false
+#      enableTelemetry: true
+
+#  - task: CopyFiles@2
+#    displayName: 'Copy Files'
+#    inputs:
+#      SourceFolder: 'service-deployments/identity-svc'
+#      Contents: grassroots-identity-manifest-002.yml
+#      TargetFolder: '$(Build.ArtifactStagingDirectory)\dev'  
+  
+#  - task: PublishBuildArtifacts@1
+#    displayName: 'Publish Artifact identitydev'
+#    inputs:
+#      PathtoPublish: '$(Build.ArtifactStagingDirectory)\dev'
+#      ArtifactName: identitydev
+
+#########################################################################################################################
+#- job: sit
+#  pool:
+#    vmImage: 'ubuntu-20.04'
+#  variables:
+#  - group: CA-Grassroots-Web-SIT-VG
+#  - group: CA-Grassroots-Web-SIT-KeyVault-VG
+  
+#  steps:
+#  - task: FileTransform@1
+#    displayName: 'File Transform SIT'
+#    inputs:
+#      folderPath: API/Grassroots.Identity.API/
+#      fileType: json
+#      targetFiles: appsettings.json
+#  - task: Docker@2
+#    displayName: 'Build and Push Image identity'
+#    inputs:
+#      containerRegistry: 'docker-aks'
+#      repository: 'cricketaustralia/web-grassroots-identity-sit'
+#      command: buildAndPush
+#      Dockerfile: Dockerfile
+
+#  - task: 'qetza.replacetokens.replacetokens-task.replacetokens@3'
+#    displayName: 'Replace Token SIT'
+#    inputs:
+#      rootDirectory: 'service-deployments/identity-svc'
+#      targetFiles: 'grassroots-identity-manifest-002.yml'
+#      encoding: 'auto'
+#      writeBOM: true
+#      actionOnMissing: 'warn'
+#      keepToken: false
+#      tokenPrefix: '#{'
+#      tokenSuffix: '}#'
+#      useLegacyPattern: false
+#      enableTelemetry: true
+
+#  - task: CopyFiles@2
+#    displayName: 'Copy Files'
+#    inputs:
+#      SourceFolder: 'service-deployments/identity-svc'
+#      Contents: grassroots-identity-manifest-002.yml     
+#      TargetFolder: '$(Build.ArtifactStagingDirectory)\sit'
+
+#  - task: PublishBuildArtifacts@1
+#    displayName: 'Publish Artifact identitysit'
+#    inputs:
+#      PathtoPublish: '$(Build.ArtifactStagingDirectory)\sit'
+#      ArtifactName: identitysit
+
+#########################################################################################################################
+#- job: uat
+#  pool:
+#    vmImage: 'ubuntu-20.04'
+#  variables:
+#  - group: CA-Grassroots-Web-UAT-VG
+#  - group: CA-Grassroots-Web-UAT-KeyVault-VG
+  
+#  steps:
+#  - task: FileTransform@1
+#    displayName: 'File Transform UAT'
+#    inputs:
+#      folderPath: API/Grassroots.Identity.API/
+#      fileType: json
+#      targetFiles: appsettings.json
+      
+#  - task: Docker@2
+#    displayName: 'Build and Push Image identity'
+#    inputs:
+#      containerRegistry: 'docker-aks'
+#      repository: 'cricketaustralia/web-grassroots-identity-uat'
+#      command: buildAndPush
+#      Dockerfile: Dockerfile
+  
+#  - task: 'qetza.replacetokens.replacetokens-task.replacetokens@3'
+#    displayName: 'Replace Token UAT'
+#    inputs:
+#      rootDirectory: 'service-deployments/identity-svc'
+#      targetFiles: 'grassroots-identity-manifest-002.yml'
+#      encoding: 'auto'
+#      writeBOM: true
+#      actionOnMissing: 'warn'
+#      keepToken: false
+#      tokenPrefix: '#{'
+#      tokenSuffix: '}#'
+#      useLegacyPattern: false
+#      enableTelemetry: true
+
+#  - task: CopyFiles@2
+#    displayName: 'Copy Files deployment file'
+#    inputs:
+#      SourceFolder: 'service-deployments/identity-svc'
+#      Contents: grassroots-identity-manifest-002.yml     
+#      TargetFolder: '$(Build.ArtifactStagingDirectory)\uat'
+  
+#  - task: PublishBuildArtifacts@1
+#    displayName: 'Publish Artifact: identityuat'
+#    inputs:
+#      PathtoPublish: '$(Build.ArtifactStagingDirectory)\uat'
+#      ArtifactName: identityuat
+#########################################################################################################################
+#- job: prod
+#  pool:
+#    vmImage: 'ubuntu-20.04'
+#  variables:
+#  - group: CA-Grassroots-Web-PROD-VG
+#  - group: CA-Grassroots-Web-PROD-KeyVault-VG
+  
+#  steps:
+#  - task: FileTransform@1
+#    displayName: 'File Transform PROD'
+#    inputs:
+#      folderPath: API/Grassroots.Identity.API/
+#      fileType: json
+#      targetFiles: appsettings.json
+      
+#  - task: Docker@2
+#    displayName: 'Build and Push Image identity'
+#    inputs:
+#      containerRegistry: 'docker-aks'
+#      repository: 'cricketaustralia/web-grassroots-identity-prod'
+#      command: buildAndPush
+#      Dockerfile: Dockerfile
+  
+#  - task: 'qetza.replacetokens.replacetokens-task.replacetokens@3'
+#    displayName: 'Replace Token PROD'
+#    inputs:
+#      rootDirectory: 'service-deployments/identity-svc'
+#      targetFiles: 'grassroots-identity-manifest-002.yml'
+#      encoding: 'auto'
+#      writeBOM: true
+#      actionOnMissing: 'warn'
+#      keepToken: false
+#      tokenPrefix: '#{'
+#      tokenSuffix: '}#'
+#      useLegacyPattern: false
+#      enableTelemetry: true
+
+#  - task: CopyFiles@2
+#    displayName: 'Copy Files deployment file'
+#    inputs:
+#      SourceFolder: 'service-deployments/identity-svc'
+#      Contents: grassroots-identity-manifest-002.yml     
+#      TargetFolder: '$(Build.ArtifactStagingDirectory)\prod'
+  
+#  - task: PublishBuildArtifacts@1
+#    displayName: 'Publish Artifact: identityprod'
+#    inputs:
+#      PathtoPublish: '$(Build.ArtifactStagingDirectory)\prod'
+#      ArtifactName: identityprod
+
+#########################################################################################################################
+- job: Linux_FunctionsWebJobs
+  pool:
+    vmImage: 'ubuntu-20.04'  
+  steps:
+  - task: DotNetCoreCLI@2
+    displayName: 'Restore CRM Feed'
+    inputs:
+      command: restore
+      projects: '**//*.csproj'
+      feedsToUse: config
+      nugetConfigPath: NuGet.config
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Build CRM Feed'
+    inputs:
+      projects: '**//Grassroots.Identity.Functions.csproj'
+      arguments: '--configuration $(BuildConfiguration) --no-restore'
+      workingDirectory: Functions/Grassroots.Identity.Functions
+  - task: DotNetCoreCLI@2
+    displayName: 'dotnet publish'
+    inputs:
+      command: publish
+      publishWebProjects: false
+      projects: '**//Grassroots.Identity.Functions.csproj'
+      arguments: '-c $(BuildConfiguration) -o $(Build.ArtifactStagingDirectory)/CRMFeed'
+      zipAfterPublish: false
+      modifyOutputPath: false
+      workingDirectory: Functions/Grassroots.Identity.Functions
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: CRMFeed'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)/CRMFeed'
+      ArtifactName: CRMFeed
+#########################################################################################################################
+- job: Linux_cdcFunctionsWebJobs
+  pool:
+    vmImage: 'ubuntu-20.04'  
+  steps:
+  - task: DotNetCoreCLI@2
+    displayName: 'Restore CDC Feed'
+    inputs:
+      command: restore
+      projects: '**//*.csproj'
+      feedsToUse: config
+      nugetConfigPath: NuGet.config
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Build CDC Feed'
+    inputs:
+      projects: '**//Grassroots.Identity.Functions.Cdc.csproj'
+      arguments: '--configuration $(BuildConfiguration) --no-restore'
+      workingDirectory: Functions/Grassroots.Identity.Functions.Cdc
+  - task: DotNetCoreCLI@2
+    displayName: 'dotnet publish'
+    inputs:
+      command: publish
+      publishWebProjects: false
+      projects: '**//Grassroots.Identity.Functions.Cdc.csproj'
+      arguments: '-c $(BuildConfiguration) -o $(Build.ArtifactStagingDirectory)/CDCFeed'
+      zipAfterPublish: false
+      modifyOutputPath: false
+      workingDirectory: Functions/Grassroots.Identity.Functions.Cdc
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: CDCFeed'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)/CDCFeed'
+      ArtifactName: CDCFeed
+#########################################################################################################################
+
+- job: Linux_InsiderFunctionsWebJobs
+  pool:
+    vmImage: 'ubuntu-20.04'  
+  steps:
+  - task: DotNetCoreCLI@2
+    displayName: 'Restore Insider Feed'
+    inputs:
+      command: restore
+      projects: '**//*.csproj'
+      feedsToUse: config
+      nugetConfigPath: NuGet.config
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Build INSIDER Feed'
+    inputs:
+      projects: '**//Grassroots.Identity.Functions.External.csproj'
+      arguments: '--configuration $(BuildConfiguration) --no-restore'
+      workingDirectory: Functions/Grassroots.Identity.Functions.External
+  - task: DotNetCoreCLI@2
+    displayName: 'dotnet publish'
+    inputs:
+      command: publish
+      publishWebProjects: false
+      projects: '**//Grassroots.Identity.Functions.External.csproj'
+      arguments: '-c $(BuildConfiguration) -o $(Build.ArtifactStagingDirectory)/INSIDERFeed'
+      zipAfterPublish: false
+      modifyOutputPath: false
+      workingDirectory: Functions/Grassroots.Identity.Functions.External
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact:INSIDERFeed'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)/INSIDERFeed'
+      ArtifactName: INSIDERFeed
+#########################################################################################################################
+- job: Windows_DB_DacPac
+  pool:
+    vmImage: 'windows-2022'
+    
+
+  steps:
+  - task: NuGetToolInstaller@1
+    displayName: 'Use NuGet '
+    inputs:
+      checkLatest: true
+
+  - task: NuGetCommand@2
+    displayName: 'NuGet restore'
+    inputs:
+      feedsToUse: config
+      nugetConfigPath: NuGet.config
+
+  - task: VSBuild@1
+    displayName: 'Build DB DacPac'
+    inputs:
+      solution: Database/Grassroots.Identity.Database/Grassroots.Identity.Database.sqlproj
+      vsVersion: 16.0
+      msbuildArgs: '/P:TargetProfile=$(BuildConfiguration)'
+      platform: '$(BuildPlatform)'
+      configuration: '$(BuildConfiguration)'
+      clean: true
+
+  - task: CopyFiles@2
+    displayName: 'Copy Files : Package Artifacts'
+    inputs:
+      SourceFolder: '$(system.defaultworkingdirectory)'
+      Contents: |
+       **\Grassroots.Identity.Database\bin\**
+       **\Grassroots.Identity.Database\*.xml
+       !**\Test\**
+       !**\NuGet\**
+       !**\obj\**
+       !**\*.pdb
+       !**\*.cs
+       !**\*.csproj
+       !**\Properties\**
+       !**\packages.config
+      TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+  - task: PublishPipelineArtifact@1
+    displayName: DacPac
+    inputs:
+      targetPath: '$(Build.ArtifactStagingDirectory)'
+      artifact: 'IdentityDB-DacPac'
+##################################################################################################
+- job: Completion
+  pool:
+    vmImage: 'windows-2019'
+  dependsOn:
+  - Linux_FunctionsWebJobs
+  - Linux_cdcFunctionsWebJobs
+  - Linux_InsiderFunctionsWebJobs
+  - Windows_DB_DacPac
+  condition: |
+    and
+    (      
+      in(dependencies.Linux_FunctionsWebJobs.result, 'Succeeded'),
+      in(dependencies.Linux_cdcFunctionsWebJobs.result, 'Succeeded'),
+      in(dependencies.Linux_InsiderFunctionsWebJobs.result, 'Succeeded'),
+      in(dependencies.Windows_DB_DacPac.result, 'Succeeded')
+    )
+  steps:
+  - script: echo 'All Linux and Windows Job has completed, now triggering release'
+    displayName: 'Completion of CI pipeline'
+##################################################################################################
+# Last updated and modified by Prabhudev 19/04/2023

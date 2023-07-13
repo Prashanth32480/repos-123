@@ -1,0 +1,8 @@
+{
+  "servicestack": {
+    "license": "17900-e1JlZjoxNzkwMCxOYW1lOkNyaWNrZXQgQXVzdHJhbGlhLFR5cGU6QnVzaW5lc3MsTWV0YTowLEhhc2g6aEUrZDdLQzJiZ1pmRGxCaXZIOGlFSUtsT2RiSGZyQkJaQVlxY0xpbWcrVHFZWFBmSzVlVnQrVDJ1MjBQODFuNUluVjNmdEorbnI5VW1nYjZ3TlFyRFVMY0JlbzlvSkh2S1dSeDhvMTd2Q0FWYlNvc2JMMERFTlhXaDZWclpITFp0L1IxZS9COFJCZTlWNnJFVjVEbWpVbWwrei9UaVMrL25DRmZ3ZTNiWG1VPSxFeHBpcnk6MjAyMi0wNS0xM30="
+  },
+  "TestProjects": [
+    "Grassroots.Identity.API.IntegrationTest"
+  ]
+}

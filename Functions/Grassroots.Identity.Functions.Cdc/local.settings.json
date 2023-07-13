@@ -1,0 +1,44 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "IdentityIsLocal": true,
+    "GrassrootsKeyVaultBaseUrl": "https://keyvaulturl",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "3251262e-e5fd-4d4a-90fc-6fd06f643937",
+    "IdentityDbConnectionString": "Server=tcp:ac-dev-identity-sql.database.windows.net,1433;Initial Catalog=ac-dev-identity-db;Persist Security Info=False;User ID=acsqladmin;Password=XtIvW0kL1AkpTFQ!^2w$Pa85;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=acdevidentityfunc;AccountKey=rEUXXMEYh1v9OzbSkfNqBNb2SBT2EXfzUNU2zDKWXIQO3VD2hf+HB/VJ8lu2AYSD/vDMbBaTJKdg+AStX5s1Sw==;EndpointSuffix=core.windows.net",
+    "IdentityRawFeedStorageConnection": "DefaultEndpointsProtocol=https;AccountName=acdevidentityfunc;AccountKey=T7+PkzknxUdmB66GnXTgQOi54R5RApkk9Xi3Bn5w9WqJWnzxr1a3xFvHFsLnFPjqHyGofWbmHl05p8eFCqlF4Q==;EndpointSuffix=core.windows.net",
+    "LaunchDarkly.SDKKey": "sdk-9993d737-ca73-4ae0-ad99-cd7dd6763675",
+    "GrassrootsChangeTrackEnabled": true,
+    "GrassrootsDomainEventGridEndPoint": "https://ac-dev-grassroots-domains-evg.australiaeast-1.eventgrid.azure.net/api/events",
+    "GrassrootsDomainEventGridKey": "1jXf4Ddr1908SB6LFNBemVkOEfU+79ZogU0+XAJQu4c=",
+    "GrassrootsPublishEventToBeRetrySeconds": "3",
+    "GrassrootsPublishEventToBeRetryCount": "5",
+    "IdentityCdcFeedsContainer": "cdcfeedcontainer",
+
+    "IdentityDomainEventGridEndPoint": "https://ac-dev-identity-ext-evg.australiaeast-1.eventgrid.azure.net/api/events",
+    "IdentityDomainEventGridKey": "Ch6n+z4xE0IIEBPl5GXkDgmjG7PCkv7UD6uK3t2MIOk=",
+    "IdentityPublishEventToBeRetrySeconds": "3",
+    "IdentityPublishEventToBeRetryCount": "5",
+
+    //CDC
+    "CDCApiKey": "4_V_QZAzAvVc9AcWf9KsaeCA",
+    "CDCUserKey": "AOT7kFJP6mFU",
+    "CDCSecretKey": "UBoKVeTq5ARoIQK82FQVssLGJJM+IItI",
+    "CDCPlayHqIdSchemaName": "playHQId",
+    "CDCAccountApiBaseUrl": "https://accounts.au1.gigya.com/",
+    "CDCAuditApiBaseUrl": "https://audit.au1.gigya.com/",
+    "CDCAPiKeysToProcessFeeds": "3_tUThw_nMem4589McKYI62lcJgUjoWdzabYwrmUZJnn7gox7wckOkpO7oaaSYj0VN,3_b_qbc5kjTRAmGevU7Q4KBKtAaAPdQh9GG0sw7oGT_XugAUVxkfGCCwrfTzZBfEeu,3_KpMYzpHCEDK5pfaGckE4CitUMVlVYUA8kGeBetcNHmo9TUBj3ajj-Z1DFsaJ_Y8I,4_w3kKxyVFun25vltms4HSlw",
+    "CDCAuditCallDelay": "300",
+    "OneCustomerCdcApiKey": "C8UJVLT3EG9YFM62QB4SKA5Z",
+
+    //  Interact (MyCricket)
+    "GrassrootsInteractSharedKey": "C8UJVLT3EG9YFM62QB4SKA5Z",
+    "GrassrootsInteractApiUrl": "https://uat-apimyc-cdn.cricket.com.au/",
+    "GrassrootsInteractApiId": "1013",
+
+    // Identity Orchestrator settings
+    "ActivityFunctionMapping": "[{\"Property\":\"myCricket\\\",myCricketId\\\"\",\"ActivityFunction\":\"KondoFeedActivityFunction\",\"AdditionalData\":\"ParticipantId\"},{\"Property\":\"email,firstName,lastName,state,country,favTeam,syncInsiderPanels\",\"ActivityFunction\":\"InsiderFeedActivityFunction\",\"Subscriptions\":\"adelaideStrikers.generalMarketing,adelaideStrikers.membership,adelaideStrikers.tickets,brisbaneHeat.generalMarketing,brisbaneHeat.membership,brisbaneHeat.tickets,hobartHurricanes.generalMarketing,hobartHurricanes.membership,hobartHurricanes.tickets,melbourneRenegades.generalMarketing,melbourneRenegades.membership,melbourneRenegades.tickets,melbourneStars.generalMarketing,melbourneStars.membership,melbourneStars.tickets,perthScorchers.generalMarketing,perthScorchers.membership,perthScorchers.tickets,sydneySixers.generalMarketing,sydneySixers.membership,sydneySixers.tickets,sydneyThunder.generalMarketing,sydneyThunder.membership,sydneyThunder.tickets,cricketAustralia.generalMarketing,cricketAustralia.shop,cricketAustralia.tickets,cricketAustralia.travelOffice,cricketAustralia.blastNewsletter,cricketAustralia.theWicket\",\"Consent\":\"other.caSubscribe\"},{\"Property\":\"email,firstName,lastName,state,country\",\"ActivityFunction\":\"OneCustomerFeedActivityFunction\",\"Subscriptions\":\"adelaideStrikers.generalMarketing,adelaideStrikers.membership,adelaideStrikers.tickets,brisbaneHeat.generalMarketing,brisbaneHeat.membership,brisbaneHeat.tickets,hobartHurricanes.generalMarketing,hobartHurricanes.membership,hobartHurricanes.tickets,melbourneRenegades.generalMarketing,melbourneRenegades.membership,melbourneRenegades.tickets,melbourneStars.generalMarketing,melbourneStars.membership,melbourneStars.tickets,perthScorchers.generalMarketing,perthScorchers.membership,perthScorchers.tickets,sydneySixers.generalMarketing,sydneySixers.membership,sydneySixers.tickets,sydneyThunder.generalMarketing,sydneyThunder.membership,sydneyThunder.tickets,cricketAustralia.generalMarketing,cricketAustralia.shop,cricketAustralia.tickets,cricketAustralia.travelOffice,cricketAustralia.blastNewsletter,cricketAustralia.theWicket\",\"Consent\":\"other.caSubscribe\",\"AdditionalData\":\"Created,LastUpdated\"}]"
+
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "IdentityIsLocal": true,
+    "GrassrootsKeyVaultBaseUrl": "https://keyvaulturl",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "3251262e-e5fd-4d4a-90fc-6fd06f643937",
+    "IdentityDbConnectionString": "Server=tcp:ac-dev-identity-sql.database.windows.net,1433;Initial Catalog=ac-dev-identity-db;Persist Security Info=False;User ID=acsqladmin;Password=XtIvW0kL1AkpTFQ!^2w$Pa85;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=acdevidentityfunc;AccountKey=rEUXXMEYh1v9OzbSkfNqBNb2SBT2EXfzUNU2zDKWXIQO3VD2hf+HB/VJ8lu2AYSD/vDMbBaTJKdg+AStX5s1Sw==;EndpointSuffix=core.windows.net",
+    "IdentityRawFeedStorageConnection": "DefaultEndpointsProtocol=https;AccountName=acdevidentityfunc;AccountKey=T7+PkzknxUdmB66GnXTgQOi54R5RApkk9Xi3Bn5w9WqJWnzxr1a3xFvHFsLnFPjqHyGofWbmHl05p8eFCqlF4Q==;EndpointSuffix=core.windows.net",
+    "IdentityFeedsContainer": "playhqfeedcontainer",
+    "LaunchDarkly.SDKKey": "sdk-9993d737-ca73-4ae0-ad99-cd7dd6763675",
+    "CDCApiKey": "3_U0rWER7APk2WdrnQwDWuaGAhEeAxw3HES27HcgMazfXHM2q05P1vcZhRA0J_UeAd",
+    "CDCUserKey": "AOT7kFJP6mFU",
+    "CDCSecretKey": "UBoKVeTq5ARoIQK82FQVssLGJJM+IItI",
+    "CDCPlayHqIdSchemaName": "playHQId",
+    "CDCSetAccountUrl": "https://accounts.au1.gigya.com/accounts.setAccountInfo",
+    "CDCAccountBaseUrl": "https://accounts.au1.gigya.com/",
+    "GrassrootsChangeTrackEnabled": true,
+    "GrassrootsDomainEventGridEndPoint": "https://ac-dev-grassroots-domains-evg.australiaeast-1.eventgrid.azure.net/api/events",
+    "GrassrootsDomainEventGridKey": "1jXf4Ddr1908SB6LFNBemVkOEfU+79ZogU0+XAJQu4c=",
+    "GrassrootsPublishEventToBeRetrySeconds": "3",
+    "GrassrootsPublishEventToBeRetryCount": "5",
+    "PhqProfileUpdatedFeedDelay": "30000"
+
+  }
+}

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grassroots.Common.Helpers" Version="2.1.3" />
+    <PackageReference Include="Grassroots.Common.Interact.Service" Version="2.1.3" />
+    <PackageReference Include="Grassroots.Common.Interact.ServiceModel" Version="2.1.3" />
+    <PackageReference Include="ServiceStack" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Database\Grassroots.Identity.Database.Model\Grassroots.Identity.Database.Model.csproj" />
+  </ItemGroup>
+
+</Project>
