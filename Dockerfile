@@ -13,6 +13,9 @@ COPY NuGet.config .
 RUN dotnet restore API/Grassroots.Identity.API/Grassroots.Identity.API.csproj --configfile NuGet.config
 COPY . .
 
+
+###
+
 #RUN dotnet build and publish output in out directory
 RUN dotnet build API/Grassroots.Identity.API/Grassroots.Identity.API.csproj
 RUN dotnet publish API/Grassroots.Identity.API/Grassroots.Identity.API.csproj -c Release -p:PublishDir=out
