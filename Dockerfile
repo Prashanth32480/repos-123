@@ -35,6 +35,8 @@ COPY proxy.conf /etc/nginx/
 WORKDIR /app
 COPY --from=build /app/API/Grassroots.Identity.API/out .
 
+######
+
 #SSH CONFIG
 RUN apt update \
   && apt install -y --no-install-recommends openssh-server \
