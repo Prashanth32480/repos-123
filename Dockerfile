@@ -15,7 +15,7 @@ COPY . .
 
 # Build runtime image for dotnetcore && nginx && ssh
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS base
-RUN apt-get update && apt-get install -y gnupg2 && apt-get install -y wget
+#RUN apt-get update && apt-get install -y gnupg2 && apt-get install -y wget
 RUN echo "deb http://nginx.org/packages/mainline/debian/ stretch nginx" >> /etc/apt/sources.list
 RUN wget http://nginx.org/keys/nginx_signing.key
 RUN apt-key add nginx_signing.key
