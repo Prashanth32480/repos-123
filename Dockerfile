@@ -6,12 +6,12 @@ COPY . .
 # COPY Common/Grassroots.Identity.Common.ServiceStack/Grassroots.Identity.Common.ServiceStack.csproj Common/Grassroots.Identity.Common.ServiceStack/
 
 COPY NuGet.config .
-RUN dotnet restore API/Grassroots.Identity.API/Grassroots.Identity.API.csproj --configfile NuGet.config
+RUN dotnet restore **/*.csproj --configfile NuGet.config
 COPY . .
 
 #RUN dotnet build and publish output in out directory
-RUN dotnet build API/Grassroots.Identity.API/Grassroots.Identity.API.csproj
-RUN dotnet publish API/Grassroots.Identity.API/Grassroots.Identity.API.csproj -c Release -p:PublishDir=out
+RUN dotnet build **/*.csproj
+RUN dotnet publish **/*.csproj -c Release -p:PublishDir=out
 
 # Build runtime image for dotnetcore && nginx && ssh
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS base
