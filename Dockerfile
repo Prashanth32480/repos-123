@@ -1,10 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /app
-COPY API/Grassroots.Identity.API/Grassroots.Identity.API.csproj API/Grassroots.Identity.API/
-COPY Common/Grassroots.Identity.Common.DependencyContainer/Grassroots.Identity.Common.DependencyContainer.csproj Common/Grassroots.Identity.Common.DependencyContainer/
-COPY Common/Grassroots.Identity.Common/Grassroots.Identity.Common.csproj Common/Grassroots.Identity.Common/
-COPY API/Grassroots.Identity.API.ServiceInterface/Grassroots.Identity.API.ServiceInterface.csproj API/Grassroots.Identity.API.ServiceInterface/
-COPY API/Grassroots.Identity.API.ServiceModel/Grassroots.Identity.API.ServiceModel.csproj API/Grassroots.Identity.API.ServiceModel/
+COPY ..
 
 # REMOVED ServiceStack.csproj PROJECT
 # COPY Common/Grassroots.Identity.Common.ServiceStack/Grassroots.Identity.Common.ServiceStack.csproj Common/Grassroots.Identity.Common.ServiceStack/
