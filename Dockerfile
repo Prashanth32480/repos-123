@@ -6,12 +6,12 @@ COPY . .
 # COPY Common/Grassroots.Identity.Common.ServiceStack/Grassroots.Identity.Common.ServiceStack.csproj Common/Grassroots.Identity.Common.ServiceStack/
 
 COPY NuGet.config .
-RUN dotnet restore . . --configfile NuGet.config
+RUN dotnet . .
 COPY . .
 
 #RUN dotnet build and publish output in out directory
 RUN dotnet build . .
-RUN dotnet publish . . -c Release -p:PublishDir=out
+RUN dotnet publish . . 
 
 # Build runtime image for dotnetcore && nginx && ssh
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS base
