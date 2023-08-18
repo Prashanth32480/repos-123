@@ -10,7 +10,7 @@ COPY NuGet.config .
 COPY . .
 
 #RUN dotnet build and publish output in out directory
-RUN dotnet build . .
+
 
 
 # Build runtime image for dotnetcore && nginx && ssh
